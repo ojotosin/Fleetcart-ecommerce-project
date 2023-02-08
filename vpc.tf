@@ -57,13 +57,13 @@ resource "aws_route_table" "public_route_table" {
 
 # associates public subnet AZ1 with public route table
 resource "aws_route_table_association" "AZ1" {
-  subnet_id                 = aws_subnet.public_subnetAZ1
+  subnet_id                 = aws_subnet.public_subnetAZ1.id
   route_table_id            = aws_route_table.public_route_table.id
 }
 
 # associates public subnet AZ2 with public route table
 resource "aws_route_table_association" "AZ2" {
-  subnet_id                 = aws_subnet.public_subnetAZ2
+  subnet_id                 = aws_subnet.public_subnetAZ2.id
   route_table_id            = aws_route_table.public_route_table.id
 }
 
