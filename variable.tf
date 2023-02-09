@@ -107,3 +107,32 @@ variable "operator_email" {
     type = string
   
 }
+
+# autoscaling group variables
+variable "launch_template_name" {
+    default = "dev-launch-template"
+    description = "launch template name"
+    type = string
+  
+}
+
+variable "ec2_image_id" {
+    default = "ami-0ee3439736243d1e4" // ami id from snapshot created
+    description = "ami id"
+    type = string
+  
+}
+
+variable "ec2_instance_type" {
+    default = "t2.micro"
+    description = "ec2 instance type"
+    type = string
+  
+}
+
+variable "ec2_keypair_name" {
+    default = "npop-Keypair"
+    description = "key pair name"
+    type = string
+  
+}
