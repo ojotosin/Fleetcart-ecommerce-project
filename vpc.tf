@@ -103,7 +103,7 @@ resource "aws_subnet" "private_datasubnetAZ1" {
   }
 }
 
-# creates private app subnet in az2
+# creates private data subnet in az2
 resource "aws_subnet" "private_datasubnetAZ2" {
   vpc_id                    = aws_vpc.vpc.id
   cidr_block                = var.private_datasubnetAZ2_cidr
