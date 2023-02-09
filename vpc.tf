@@ -18,7 +18,7 @@ resource "aws_internet_gateway" "igw" {
   }
 }
 
-# creates public subnet in az2
+# creates public subnet in az1
 resource "aws_subnet" "public_subnetAZ1" {
   vpc_id                    = aws_vpc.vpc.id
   cidr_block                = var.public_subnetAZ1_cidr

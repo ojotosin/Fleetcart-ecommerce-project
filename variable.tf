@@ -1,3 +1,4 @@
+# vpc variables
 variable "dev_vpc_cidr" {
     default             = "10.0.0.0/16"
     description         = "dev vp cidr"
@@ -88,5 +89,13 @@ variable "multi_az_deployment" {
     default = false
     description = "creates a standby db instance"
     type = bool
+  
+}
+
+# application Load balancer variables
+variable "ssl_certificate_arn" {
+    default = "arn:aws:acm:us-east-1:774443160673:certificate/3a4ae261-bb4e-45d6-a6fa-fafdea2466c1"
+    description = "SSL certificate arn"
+    type = string
   
 }
